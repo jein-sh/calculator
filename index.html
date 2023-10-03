@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Credit calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Credit calculator">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Raleway:wght@600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <div class="calculator">
+        <h1 class="calculator__title">How Much  Would You Like <span class='mint'>To Borrow?</span></h1>
+        <form>
+          <div class="calculator__wrapper">
+
+          <div class="calculator__data">              
+            <div class="calculator__range range">
+              <label for="amound">borrow amount</label>
+              <div class="range__block">
+                <input type="range" id="amound" name="amound" min="1000" max="20000" value="2000" step="10" />
+                <div class="range__track"></div>
+              </div>
+              <div class="range__min-max">             
+                <span>£1000</span>
+                <span>£20k</span>
+              </div>
+              <span class="calculator__amound">£2,000.00</span>
+            </div>
+            <div class="calculator__range range">
+              <label for="period">payment period</label>
+              <div class="range__block">
+                <input type="range" id="period" name="period" min="1" max="15" value="5" step="1" />
+                <div class="range__track"></div>
+              </div>
+              <div class="range__min-max">                
+                <span>1 year</span>
+                <span>15 years</span>
+              </div>
+              <span class="calculator__period">5 years</span>
+            </div>
+            <div class="calculator__date">
+              <label for="date" class="mint">deposit date</label>
+              <div class="calculator__date-bottom">
+                <span class="calculator__percent">4,95%</span>
+                <div class="flatpickr">
+                  <input type="text" placeholder="01 / 12 /2023" data-input>
+                  <a class="input-button" title="toggle" data-toggle>
+                    <svg width="26" height="28" viewBox="0 0 26 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M23 2.75H21.75V0.25H19.25V2.75H6.75V0.25H4.25V2.75H3C1.625 2.75 0.5 3.875 0.5 5.25V25.25C0.5 26.625 1.625 27.75 3 27.75H23C24.375 27.75 25.5 26.625 25.5 25.25V5.25C25.5 3.875 24.375 2.75 23 2.75ZM23 25.25H3V9H23V25.25Z" fill="#808080"/>
+                    </svg>                      
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="calculator__deposit">
+              <div class="calculator__deposit-method">
+                <input type="radio" value="bank" id="deposit-bank" name="deposit" class="visually-hidden" checked>
+                <label for="deposit-bank">deposit Bank transfer</label>
+              </div>
+              <div class="calculator__deposit-method">
+                <input type="radio" value="cash" id="deposit-cash" name="deposit" class="visually-hidden">
+                <label for="deposit-cash">cash</label>
+              </div>
+            </div>
+          </div>
+          <div class="calculator__result">
+            <div class="calculator__payment">
+                <h2>monthly payment</h2>
+                <span class="mint calculator__result-payment">£80,20.00</span>
+                <span>fees include</span>
+            </div>
+            <div class="calculator__details">
+              <div class="calculator__detail">
+                <h3>borrowing</h3>
+                <span class="calculator__result-borrowing">£2,000.00</span>
+              </div>
+              <div class="calculator__detail calculator__detail--mint">
+                <h3>to repay</h3>
+                <span class="calculator__result-repay">£3,500.00</span>
+              </div>
+            </div>
+            <button type="submit" class="calculator__button">Send form</button>
+          </div>
+          </div>
+        </form>
+
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
